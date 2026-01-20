@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бууу......... не бойся</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <div id="main">
+            <h1>Привет‽</h1>
+            <h3>Маленький опрос по твоим страхам,не бойся мы не будем использовать их</h3>
+            <br>
+            <p>Опрос</p>
+            <div id="ots">
+                <div id="upper">
+                    <h4>Ваш главный страх</h4>
+                    <form><input id="inpt" ><br><input type="reset" id="reset"  value="X"></form>
+                    <h4>"Мы его не сольем!<br>Не зачто!"</h4>
+                </div>
+                <a id="lr"><b><u><i>OR</i></u></b></a>
+                <div>
+                    <h4>Выберите ваш возраст</h4>
+                    <label class="radio">
+                        <input type="radio" name="radio" value="deti" 
+                        <span class="name">~8-13</span>
+                    </label><br>
+                    <label class="radio">
+                        <input type="radio" value="pubertat" name="radio" checked>
+                        <span class="name">14-17</span>
+                    </label><br>
+                    <label class="radio">
+                        <input type="radio" name="radio" value="adults" >
+                        <span class="name">18-29</span>
+                    </label><br>
+                    <label class="radio">
+                        <input type="radio" value="middle" name="radio">
+                        <span class="name">30-54</span>
+                    </label><br>
+                    <label class="radio">
+                        <input type="radio" name="radio" value="old">
+                        <span class="name">55-64</span>
+                    </label><br><br>
+                </div>
+            </div>
+            <br>
+            <a>Проверка каждые 
+                <select id="min">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>30</option>
+                    <option>45</option>
+                    <option>60</option>
+                </select>
+                минут
+            </a> 
+            <br><br>
+            <input type="checkbox" id="check" required><a>Я соглащаюсь с <u><i><b title="Мы напугаем вас! Если вам не 65+. Каждые n секунд. Если вы уснетё!">условиями.</b></i></u></a><br><br> 
+            <input type="submit" class="sbm" id="sbm" disabled onclick="func()">
+        </div>
+
+        <div id="addons"><h1 >Нажмите или будете испуганы!</h1><button value="0" class="sbm" id="btn" onclick="plusone()">Я не сплю!</button></div>
+        <h1 id="text"></h1><video autoplay controls id="vid"></a>
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>

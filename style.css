@@ -1,0 +1,53 @@
+html,body{
+    background-color:#101922; 
+    color:white;
+
+}
+div{
+    display: inline-block;
+}
+#lr{  
+    margin: 0 50px 0 50px; 
+}
+#ots{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.493);
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 10%;
+}
+#upper{
+    width: min-content;
+}
+#reset{
+    width: 30px;
+    height: 30px;
+    border-radius: 360px;
+    background: red;
+}
+.sbm {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+
+.sbm:active { 
+  background-color: #23c483;
+  color: #fff;
+  transform: translateY(-1px);
+}
+#inpt{
+    height: 30px;
+    text-align: center;
+    color: white;
+    background-color: #212121;
+    border-radius: 200px;
+}
+#addons,#text,#vid{
+    display: none;
+}
