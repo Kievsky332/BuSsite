@@ -63,7 +63,7 @@ function buuu(){
     }else if(typeof zn !== 'undefined' && inpt !=="") {
         vid.style.display = "inherit";
     };
-    var audio = new Audio('boo.mp3');
+    var audio = new Audio('boo1.mp3'); //'boo.mp3'or 'boo1.mp3'
     audio.volume = 0.3;
     audio.play(); 
 };
