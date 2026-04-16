@@ -3,7 +3,7 @@ const addons = document.getElementById("addons");
 const text = document.getElementById("text");
 const vid = document.getElementById("vid");
 const ddv = document.getElementById("btn");
-
+const gg = document.getElementById("select");
 const age = {
   deti: "Твои родители приемные",//8-13 лет
   pubertat: "Я солью твои данные",//14-17 лет
@@ -20,7 +20,7 @@ function func(){
         alert("Всё пусто"); //Если все пусто 
         
     } else if(typeof zn !== 'undefined' && inpt ==="") {
-        text.innerHTML = age[zn]; //если выбрал возрасть (правый блок)
+        text.innerHTML = age[zn]; //если выбрал возраст (правый блок)
         times(); //запуск таймера
     }else if(typeof zn !== 'undefined' && inpt !=="") {
         text.innerHTML = inpt; //если вписал свой страх (левый блок)
@@ -63,13 +63,13 @@ function buuu(){ //пугаем
     }else if(typeof zn !== 'undefined' && inpt !=="") {
         vid.style.display = "inherit";
     };
-    var audio = new Audio('boo1.mp3'); //'boo.mp3'(более страшнее)or 'boo1.mp3'
-    audio.volume = 0.3; //Уровень звука
+    var audio = new Audio(gg.value); //'boo.mp3'(более страшнее)or 'boo1.mp3'
+    console.log(gg.value);
+    audio.volume = 0.4; //Уровень звука
     audio.play(); 
 };
 
 function plusone(){//добавляем что бы не пугали 
-    alert ("Хорошо!");
     ddv.value ="1";
 };
 
