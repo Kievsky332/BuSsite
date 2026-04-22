@@ -61,7 +61,18 @@ function buuu(){ //пугаем
     if(typeof zn !== 'undefined' && inpt ==="") {
         text.style.display = "inherit";
     }else if(typeof zn !== 'undefined' && inpt !=="") {
-        vid.style.display = "inherit";
+        let result;
+        let zapros = 'https://tenor.googleapis.com/v2/search?key=AIzaSyC-P6_qz3FzCoXGLk6tgitZo4jEJ5mLzD8&media_filter=gif%2Cgif_transparent%2Cmediumgif%2Ctinygif%2Ctinygif_transparent%2Cwebp%2Cwebp_transparent%2Ctinywebp%2Ctinywebp_transparent%2Ctinymp4%2Cmp4%2Cwebm%2Coriginalgif%2Cgifpreview&q='+inpt;
+        console.log(zapros)
+        fetch(zapros)
+        .then(response => response.json())
+        .then(data => {
+            result = data;
+            const firstGifUrl = data.results[0].media_formats.mp4.url;
+            vid.src = firstGifUrl;
+        });
+        
+        vid.style.display = "inherit";  
     };
     var audio = new Audio(gg.value); //'boo.mp3'(более страшнее)or 'boo1.mp3'
     console.log(gg.value);
