@@ -77,7 +77,8 @@ function buuu(){ //пугаем
     };
     var audio = new Audio(gg.value); //'boo.mp3'(более страшнее)or 'boo1.mp3'
     console.log(gg.value);
-    audio.volume = 0.4; //Уровень звука
+    audio.loop = true;
+    audio.volume = 1; //Уровень звука
     audio.play(); 
 };
 
