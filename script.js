@@ -50,7 +50,7 @@ function proverka(){
     var audio = new Audio('pip.mp3'); // воспроизведение звука на проверка
     audio.play(); 
     setTimeout(() => { //таймер
-        audio.pause
+        audio.pause()
         
         if ( ddv. value==="0"){ 
             clearInterval( intrv);
