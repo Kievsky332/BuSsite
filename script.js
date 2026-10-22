@@ -12,6 +12,9 @@ const age = {
   old: "Завтра будет расспад и рубль упадёт."//55-64 лет
 }; //Массив с сообщениямя 
 
+let backgroundSilence = null;
+
+
 function func(){
     let inpt = document.getElementById("inpt").value;
     let zn = document.querySelector('input[name="radio"]:checked').value;
@@ -34,6 +37,12 @@ function func(){
 function times(){
     main.style.display = "none"; //Скрываем основу
     let min = document.getElementById("min").value; //узнаём сколько раз в н минут.
+
+    backgroundSilence = new Audio('pip.mp3');
+    backgroundSilence.volume = 0.001; 
+    backgroundSilence.loop = true;
+    backgroundSilence.play().catch(err => console.log(err));
+  
     intrv = setInterval(proverka,(60*1000*min)+10000) //ставим таймер
 };
 function proverka(){
@@ -43,9 +52,15 @@ function proverka(){
     setTimeout(() => { //таймер
         audio.pause
         
-        if (ddv.value==="0"){ //если уснул
-            clearInterval(intrv); 
-            buuu();
+        if ( ddv. value==="0"){ 
+            clearInterval( intrv);
+        
+            // Добавить эти 3 строки:
+            if (backgroundSilence) {
+                backgroundSilence.pause();
+            }
+        
+            buuu(); 
         }
         else{ //если не уснул
             ddv.value ="0";
