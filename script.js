@@ -52,7 +52,7 @@ function proverka(){
     setTimeout(() => { //таймер
         audio.pause()
         
-        if ( ddv. value==="0"){ 
+        if ( ddv.value==="0"){ 
             clearInterval( intrv);
         
             // Добавить эти 3 строки:
